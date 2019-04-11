@@ -1,0 +1,163 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+   
+   
+   <!--  customevent -->
+ <!--   
+   <bean id="ticketVenderMachine" class="com.methodinjection.TicketVenderMachine" scope="singleton">
+     <lookup-method name="generateTicket" bean="ticket"/>
+   </bean>
+   
+   <bean id="ticket" class="com.methodinjection.Ticket" scope="prototype">
+   </bean> -->
+   
+   
+   
+   
+   <!-- ApplicationEvent -->
+   
+   <!-- <bean id="emp" class="com.applicationlistener.Employee" >
+     <property name="empID" value="101"></property>
+     <property name="emp" value="mk"></property>
+   </bean>
+   
+   <bean class="com.applicationlistener.Application1"/>
+   <bean class="com.applicationlistener.Application2"/>
+    -->
+   
+   
+
+	<!-- default-init-method="init" default-destroy-method="destroy" -->
+
+	<!-- <bean id="message" class="com.infotech.model.Message" scope="singleton"> -->
+	<!-- <bean id="message" class="com.infotech.model.Message" scope="prototype"> 
+		<property name="message" value="hello" /> <property name="messageid" value="1001"></property> 
+		</bean> -->
+	<!-- <alias name="message" alias="message1"/> <alias name="message" alias="message2"/> -->
+
+	<!-- using annotation -->
+
+	<!-- <context:component-scan base-package="com.infotech.model"/> -->
+
+
+
+
+
+
+	<!-- <bean id="message" class="com.infotech.model.Message" > <property name="message" 
+		value="hello" /> <property name="messageid" value="1001"></property> </bean> 
+		<bean id="message1" class="com.infotech.model.Message1" > <property name="message" 
+		value="hello1" /> <property name="messageid" value="1002"></property> </bean> -->
+
+
+
+
+	<!-- using constructor arg -->
+
+
+	<!-- <bean id="message1" class="com.infotech.model.Message1" > <constructor-arg 
+		name="call" ref="call"></constructor-arg> </bean> <bean id="message" class="com.infotech.model.Message" 
+		> <constructor-arg name="call" ref="call"></constructor-arg> </bean> <bean 
+		id="call" class="com.infotech.call.Call" /> -->
+
+
+	<!-- inheritance -->
+
+	<!-- <bean id="parent" class="com.inheritance.Parent" abstract="true" > 
+		<property name="no" value="1001"></property> <property name="name" value="mw"></property> 
+		<property name="address" value="sakinaka"></property> </bean> <bean id="child" 
+		class="com.inheritance.Child" parent="parent" > <property name="no" value="1002"></property> 
+		<property name="name" value="malik"></property> </bean> -->
+
+
+	<!-- inheritance template -->
+
+	<!-- <bean id="parentTemplate" abstract="true" > <property name="no" value="1001"></property> 
+		<property name="name" value="mw"></property> <property name="address" value="sakinaka"></property> 
+		</bean> <bean id="child" class="com.inheritance.Child" parent="parentTemplate" 
+		> <property name="no" value="1002"></property> <property name="name" value="malik"></property> 
+		</bean> -->
+
+
+
+	<!-- Bean life cycle -->
+
+	<!-- <bean id="lifecycle" class="com.lifecycle.BeanLifeCycle" init-method="init" 
+		destroy-method="destroy"> -->
+	<!-- <bean id="lifecycle" class="com.lifecycle.BeanLifeCycle"> <property 
+		name="no" value="1001"></property> <property name="name" value="mk"></property> 
+		</bean> <bean id="comon" class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean> 
+		<context:annotation-config/> -->
+
+
+
+
+
+	<!-- Collection List Array -->
+
+<!-- 	<bean id="collection" class="com.collection.ArrayListCollection">
+		<property name="name">
+			<array>
+				<value>sk</value>
+				<value>mk</value>
+				<value>mw</value>
+			</array>
+		</property>
+
+		<property name="ls">
+			<list>
+				<value>mumbai</value>
+				<value>goa</value>
+				<value>nashik</value>
+			</list>
+		</property>
+
+		<property name="st">
+			<set>
+				<value>101</value>
+				<value>102</value>
+				<value>103</value>
+			</set>
+		</property>
+	</bean>
+ -->
+ 
+ <!--  <bean id="bean" class="com.methodinjection.BeanName">
+   <property name="name" value="mk"></property>
+  </bean> -->
+
+
+  <!--  <bean id="beanlifecycle" class="com.lifecycle.LifeCycle">
+     <property name="name" value="mk"></property>
+   </bean>
+   
+   <bean id="beanlifecycle1" class="com.lifecycle.LifeCycle1">
+     <property name="name" value="mk1"></property>
+   </bean> -->
+
+  <context:annotation-config/>
+ <context:component-scan base-package="com.listener"></context:component-scan>
+ 
+     <!-- <bean id="emp" class="com.listener.Employee">
+       <property name="name" value="mk"></property>
+     </bean>
+ -->
+
+
+   <bean id="emp" class="com.listene.Employee">
+     <property name="name" value="mk"></property>
+   </bean>
+   
+   <bean class="com.listene.ListenerEvent"></bean>
+   <bean class="com.listene.ListenerEvent2"></bean>
+   
+   
+
+
+</beans>
